@@ -1,36 +1,225 @@
-<!DOCTYPE html>
-<html>
-<body>
+<html> 
+<head>
+  <title>FeastFund</title>
+  <link rel="shortcut icon" href="https://jackbotein.github.io/funraise/favicon.ico" />
+</head>
+<body style="margin:0">
+<div class="header">
+FeastFund
+</div>
+<div class="description">
+Book meals at local restaraunts,<br>10% of your purchase aids local food banks
+</div>
 
-<button onclick="myFunction()"><img src="https://www.papajohns.com/free-pizza/img/hero-free-pizza.jpg" style="width:10vw;height:10vh;"><br>Pizza</button>
+<div class="findyourfeast">
+Find Your Feast:
+</div>
 
-<button onclick="japanese()"><img src="https://www.visitpenrith.com.au/images/things-to-do/eat-enjoy/Sushi-bay-thumb.jpg" style="width:10vw;height:10vh;"><br>Japanese</button>
+<div class="spacer" style="height:18vh"></div>
+<center>
+<button onclick="myFunction()"><div class="pizzaimg"></div>Pizza</button>
 
-<button onclick="asian()"><img src="https://www.baonation.com//blog-admin/images/asian-food-cambridge-a-variety-offered-with-great-cuisine045846.jpeg" style="width:10vw;height:10vh;"><br>Asian</button>
+<button onclick="japanese()"><div class="japaneseimg"></div>Japanese</button>
 
-<button onclick="mexican()"><img src="https://elcaminito.net/wp-content/uploads/2018/08/Authentic-Mexican-Food-Near-Me.jpg" style="width:10vw;height:10vh;"><br>Mexican</button>
+<button onclick="asian()"><div class="asianimg"></div>Asian</button>
 
-<button onclick="thai()"><img src="https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000460/img/basic/a0000460_main.jpg?20170412181434&q=80&rw=750&rh=536" style="width:10vw;height:10vh;"><br>Thai</button>
+<button onclick="mexican()"><div class="mexicanimg"></div>Mexican</button>
 
-<button onclick="sandwiches()"><img src="https://raster-static.postmates.com/?url=https%3A%2F%2Fd1725r39asqzt3.cloudfront.net%2F5088f0e9-843f-45d6-8d28-9924a284d971%2Forig.jpg&quality=85&w=640&h=0&mode=auto&format=webp&v=4" style="width:10vw;height:10vh;"><br>Sandwiches</button>
+<button onclick="thai()"><div class="thaiimg"></div>Thai</button>
 
-<button onclick="chinese()"><img src="https://raster-static.postmates.com/?url=https%3A%2F%2Fd1725r39asqzt3.cloudfront.net%2Fef53eea6-571b-4443-9572-cbb299ce2c9b%2Forig.jpg&quality=85&w=640&h=0&mode=auto&format=webp&v=4" style="width:10vw;height:10vh;"><br>Chinese</button>
+<button onclick="sandwiches()"><div class="sandwichesimg"></div>Sandwiches</button>
 
-<button onclick="vegetarian()"><img src="https://cdn.doordash.com/static/img/seo/cuisine_salad_960.png" style="width:10vw;height:10vh;"><br>Vegetarian</button>
+<button onclick="chinese()"><div class="chineseimg"></div>Chinese</button>
 
-<button onclick="american()"><img src="https://pyxis.nymag.com/v1/imgs/39a/af9/7bbf31cbccf766ed06bc3b7ad5cd0c7067-08-breslin-steak-1.rsquare.w700.jpg" style="width:10vw;height:10vh;"><br>American</button>
+<button onclick="vegetarian()"><div class="vegetarianimg"></div>Vegetarian</button>
 
-<button onclick="indian()"><img src="https://bloximages.newyork1.vip.townnews.com/standard.net/content/tncms/assets/v3/editorial/b/33/b33dccd1-fd4f-58bc-bafa-d2595198ee14/5b4f6cbbdb6f3.image.jpg?resize=945%2C630" style="width:10vw;height:10vh;"><br>Indian</button>
+<button onclick="american()"><div class="americanimg"></div>American</button>
 
-<button onclick="coffee()"><img src="https://i.guim.co.uk/img/media/3eb709d3ba0e7b1e121ac0efd934c9128eeec873/0_0_4631_2778/master/4631.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=1ac5ad1bcf791576f845e60bc3fdd58a" style="width:10vw;height:10vh;"><br>Coffee</button>
+<button onclick="indian()"><div class="indianimg"></div>Indian</button>
 
-<button onclick="dessert()"><img src="https://www.chicagotribune.com/resizer/H6nkY-85dvCsSQ7nWt1Ldvb6aPs=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/KUKFUMO7IRC5TNDWEXVSORHT3Q.jpg" style="width:10vw;height:10vh;"><br>Dessert</button>
+<button onclick="coffee()"><div class="coffeeimg"></div>Coffee</button>
 
-<button onclick="icecream()"><img src="https://www.rachaelraymag.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU2ODk2OTk5MjA2MDM2OTQx/bhg-aug-cover-try-lyons-43_31f9fbca65f7d1a746836896cfb9be1e45ca4f8b.jpg" style="width:10vw;height:10vh;"><br>Ice Cream</button>
+<button onclick="dessert()"><div class="dessertimg"></div>Dessert</button>
 
+<button onclick="icecream()"><div class="icecreamimg"></div>Ice Cream</button>
 
 
 <p id="demo"></p>
+</center>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+.header {
+  border-radius: 0vw 0vw 0vw 0vw;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 3vw;
+  padding-top: 2vw;
+   padding-bottom: 2vw;
+  color: black;
+  background-color: silver;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.description {
+border-radius: 0px 0px 10vw 10vw;
+padding-top: 1.5vw;
+padding-bottom: 1.5vw;
+background-color: silver;
+text-align: center;
+width: 68%;
+position: relative;
+top: 7.6vw;
+left: 16%;
+font-family: 'Bungee', cursive;
+font-size: 2vw;
+}
+
+.findyourfeast {
+border-radius: 0vw 0vw 10vw 10vw;
+padding-top: 1.5vw;
+padding-bottom: 1.5vw;
+background-color: silver;
+text-align: center;
+width: 35%;
+position: relative;
+top: 7.6vw;
+left: 32.5%;
+font-family: 'Bungee', cursive;
+font-size: 2vw;
+}
+
+.heading {
+width: 100%;
+text-align: center;
+font-family: 'Bungee', cursive;
+font-size: 3vw;
+color: black;
+}
+
+
+button {
+background-color: silver;
+border-radius: .5vw;
+border-style: solid;
+border-width: .1vw;
+border-color: transparent;
+font-size: 1.25vw;
+font-family: 'Bungee';
+line-height: 2.5vw;
+margin-bottom: 1.5vw;
+margin-right: .75vw;
+margin-left: .75vw;
+}
+
+.pizzaimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://www.papajohns.com/free-pizza/img/hero-free-pizza.jpg");
+}
+
+.japaneseimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://www.visitpenrith.com.au/images/things-to-do/eat-enjoy/Sushi-bay-thumb.jpg");
+}
+
+.asianimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://www.baonation.com//blog-admin/images/asian-food-cambridge-a-variety-offered-with-great-cuisine045846.jpeg");
+}
+
+.mexicanimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://elcaminito.net/wp-content/uploads/2018/08/Authentic-Mexican-Food-Near-Me.jpg");
+}
+
+.thaiimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000460/img/basic/a0000460_main.jpg?20170412181434&q=80&rw=750&rh=536");
+}
+
+.sandwichesimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://raster-static.postmates.com/?url=https%3A%2F%2Fd1725r39asqzt3.cloudfront.net%2F5088f0e9-843f-45d6-8d28-9924a284d971%2Forig.jpg&quality=85&w=640&h=0&mode=auto&format=webp&v=4");
+}
+
+.chineseimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://raster-static.postmates.com/?url=https%3A%2F%2Fd1725r39asqzt3.cloudfront.net%2Fef53eea6-571b-4443-9572-cbb299ce2c9b%2Forig.jpg&quality=85&w=640&h=0&mode=auto&format=webp&v=4");
+}
+
+.vegetarianimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://cdn.doordash.com/static/img/seo/cuisine_salad_960.png");
+}
+
+.americanimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://pyxis.nymag.com/v1/imgs/39a/af9/7bbf31cbccf766ed06bc3b7ad5cd0c7067-08-breslin-steak-1.rsquare.w700.jpg");
+}
+
+.indianimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://bloximages.newyork1.vip.townnews.com/standard.net/content/tncms/assets/v3/editorial/b/33/b33dccd1-fd4f-58bc-bafa-d2595198ee14/5b4f6cbbdb6f3.image.jpg?resize=945%2C630");
+}
+
+.coffeeimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://i.guim.co.uk/img/media/3eb709d3ba0e7b1e121ac0efd934c9128eeec873/0_0_4631_2778/master/4631.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=1ac5ad1bcf791576f845e60bc3fdd58a");
+}
+
+.dessertimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://www.chicagotribune.com/resizer/H6nkY-85dvCsSQ7nWt1Ldvb6aPs=/1200x0/top/arc-anglerfish-arc2-prod-tronc.s3.amazonaws.com/public/KUKFUMO7IRC5TNDWEXVSORHT3Q.jpg");
+}
+
+.icecreamimg {
+width: 10vw;
+height: 10vh;
+background-size:cover;
+background-repeats: no-repeats;
+background-image: url("https://www.rachaelraymag.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTU2ODk2OTk5MjA2MDM2OTQx/bhg-aug-cover-try-lyons-43_31f9fbca65f7d1a746836896cfb9be1e45ca4f8b.jpg");
+}
+
+</style>
 
 <script>
 function myFunction() {
