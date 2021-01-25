@@ -17,7 +17,7 @@ Find Your Feast:
 
 <div class="spacer" style="height:18vh"></div>
 <center>
-<button onclick="myFunction()"><div class="pizzaimg"></div>Pizza</button>
+<button onclick="pizza()"><div class="pizzaimg"></div>Pizza</button>
 
 <button onclick="japanese()"><div class="japaneseimg"></div>Japanese</button>
 
@@ -44,7 +44,9 @@ Find Your Feast:
 <button onclick="icecream()"><div class="icecreamimg"></div>Ice Cream</button>
 <hr>
 
-<p id="demo"></p>
+<div id="listing"></div>
+
+<div class="footer">2020 Feast Fund. All Rights Reserved</div>
 </center>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
@@ -223,42 +225,57 @@ hr {
 width: 80%;
 color: silver;
 height: .5vh;
-background-color:silver;
+background-color:white;
 border-width: 0vw;
 }
+
+.footer {
+color: black;
+width: 100%;
+padding-top: 1vh;
+padding-bottom: 1vh;
+background-color: white;
+font-family: 'Bungee';
+font-size: 1.5vw;
+position: absolute;
+position: fixed;
+bottom: 0vh;
+}
+
 </style>
 
 <script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Pizza food";
+
+function pizza() {
+  document.getElementById("listing").innerHTML = "<a href='https://stackoverflow.com/questions/36859062/how-to-set-image-via-innerhtml'><img src=\'http://www.pinospizza.com/wp-content/uploads/2020/10/Pinos3.png\' width=\'400px\' height=\'150px\'><br><br><img src=\'http://www.pinospizza.com/wp-content/uploads/2020/10/Pinos2.png\' width=\'400px\' height=\'150px\'></a>";
 }
 
 function japanese() {
-  document.getElementById("demo").innerHTML = "Japanese food";
+  document.getElementById("restaurantname").innerHTML = "Japanese food";
 }
 
 function asian() {
-  document.getElementById("demo").innerHTML = "Asian food";
+  document.getElementById("restaurantname").innerHTML = "Asian food";
 }
 
 function mexican() {
-  document.getElementById("demo").innerHTML = "Mexican food";
+  document.getElementById("restaurantname").innerHTML = "Mexican food";
 }
 
 function thai() {
-  document.getElementById("demo").innerHTML = "Thai food";
+  document.getElementById("restaurantname").innerHTML = "Thai food";
 }
 
 function sandwiches() {
-  document.getElementById("demo").innerHTML = "Sandwiches food";
+  document.getElementById("restaurantname").innerHTML = "Sandwiches food";
 }
 
 function chinese() {
-  document.getElementById("demo").innerHTML = "Chinese food";
+  document.getElementById("restaurantname").innerHTML = "Chinese food";
 }
 
 function vegetarian() {
-  document.getElementById("demo").innerHTML = "Vegetarian food";
+  document.getElementById("restaurantname").innerHTML = "Vegetarian food";
 }
 
 function american() {
