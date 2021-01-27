@@ -45,6 +45,21 @@ Find Your Feast:
 <hr>
 
 <div id="listing"></div>
+<div class="spacerthatisreducedwhenpizzabuttonengaged" style="height:50vh"></div>
+<div class="phonenumberpinospizza">
+<br>
+<center>
+<form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/1_7D5wEk6Hftm11SD1mteUPGCpTEAWM5z96fR7XPoP8A/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+  Phone Number:<br>
+  <input type="text" name="entry.11409722" id="entry.11409722" style="width: 20vw; background-color:white;border-width:.25vw;border-color:black;border-radius:0vw;margin-top:1vh;margin-bottom:1vh;"><br>
+  <input type="submit" value="Submit" onclick="myFunction()" style="background-color:white;border-color:black;border-radius:.5vw;">
+</form>
+<p id="successmessage"></p>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+</center>
+</div>
+
+
 <div class="spacer" style="height:8vh"></div>
 <a href="https://feastfund.github.io/v.1"><div class="footer">2020 Feast Fund. All Rights Reserved</div></a>
 </center>
@@ -257,7 +272,7 @@ color: silver;
 <script>
 
 function pizza() {
-  document.getElementById("listing").innerHTML = "<a href='https://feastfund.github.io/v.1/pinospizza' target='blank'><img src =\'https://feastfund.github.io/v.1/pinoslisting.png\' width=\'40%\' height=\'auto\' draggable=\'false\'></a>";
+  document.getElementById("listing").innerHTML = "<a href='https://feastfund.github.io/v.1/pinospizza' target='blank'><img src =\'https://feastfund.github.io/v.1/pinoslisting.png\' style='margin-bottom:-50vh' width=\'40%\' height=\'auto\' draggable=\'false\'></a>";
 }
 
 function japanese() {
