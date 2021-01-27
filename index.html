@@ -7,7 +7,7 @@
 <div class="header">
 FeastFund
 </div>
-<div class="description">
+<div class="description"> 
 Book a Meal at A local Restaurant <br> Fund A Healthy Meal For A Bostonian In Need
 </div>
 
@@ -45,7 +45,6 @@ Find Your Feast:
 <hr>
 
 <div id="listing"></div>
-<div class="spacerthatisreducedwhenpizzabuttonengaged" style="height:100vh"></div>
 <div class="phonenumberpinospizza">
 <br>
 <center>
@@ -271,8 +270,13 @@ color: silver;
 
 <script>
 
+function bookafeasthere() {
+
+  document.getElementById("bookafeasthere").innerHTML = "<div class='reversespacer' style='margin-bottom:-50%;'></div>";
+}
+
 function pizza() {
-  document.getElementById("listing").innerHTML = "<a href='https://feastfund.github.io/v.1/pinospizza' target='blank'><img src =\'https://feastfund.github.io/v.1/pinoslisting.png\' height=\'200vh\' width=\'auto\' draggable=\'false\'></a><div class='reversespacer' style='margin-bottom:-100vh;'></div>";
+  document.getElementById("listing").innerHTML = "<a href='https://feastfund.github.io/v.1/pinospizza' target='blank'><img src =\'https://feastfund.github.io/v.1/pinoslisting.png\' height=\'200vh\' width=\'auto\' draggable=\'false\'></a>";
 }
 
 function japanese() {
