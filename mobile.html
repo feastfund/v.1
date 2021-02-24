@@ -257,64 +257,86 @@ color: silver;
 <script>
 
 function pizza() {
-  document.getElementById("listing").innerHTML = "<img src ='https://feastfund.github.io/v.1/pinos/pinoslisting.png' height='auto' width='90%' draggable='false'><br><button style='position:relative;top:0vw;left:0vw;font-size: 4vw;line-height:7vw;margin-bottom:4.5vw;' onclick='pinosorderingiframe()'>Order a Feast From Pino's</button>";
+  document.getElementById("listing").innerHTML = "<img src ='https://feastfund.github.io/v.1/pinos/pinoslisting.png' height='auto' width='90%' draggable='false'><br><button style='position:relative;top:0vw;left:0vw;font-size: 20px;line-height:28px;margin-bottom:4.5vw;' onclick='pinosorderingiframe();'>Order a Feast From Pino's</button>";
 }
 
 
 function japanese() {
-  document.getElementById("listing").innerHTML = "<img src ='https://feastfund.github.io/v.1/pinoslisting.png' height='auto' width='90%' draggable='false'><br><button style='position:relative;top:0vw;left:0vw;font-size: 4vw;line-height:7vw;margin-bottom:4.5vw;' onclick='irashaorderingiframe()'>Order a Feast From Miyuki Sushi</button>";
+  document.getElementById("listing").innerHTML = "";
 }
 
 function mexican() {
-  document.getElementById("restaurantname").innerHTML = "Mexican food";
+  document.getElementById("listing").innerHTML = "Mexican food";
 }
 
 function thai() {
-  document.getElementById("restaurantname").innerHTML = "Thai food";
+  document.getElementById("listing").innerHTML = "Thai food";
 }
 
 function sandwiches() {
-  document.getElementById("restaurantname").innerHTML = "Sandwiches food";
+  document.getElementById("listing").innerHTML = "Sandwiches food";
 }
 
 function chinese() {
-  document.getElementById("restaurantname").innerHTML = "Chinese food";
+  document.getElementById("listing").innerHTML = "Chinese food";
 }
 
 function vegetarian() {
-  document.getElementById("restaurantname").innerHTML = "Vegetarian food";
+  document.getElementById("listing").innerHTML = "Vegetarian food";
 }
 
 function american() {
-  document.getElementById("demo").innerHTML = "American food";
+  document.getElementById("listing").innerHTML = "American food";
 }
 
 function indian() {
-  document.getElementById("demo").innerHTML = "Indian food";
+  document.getElementById("listing").innerHTML = "Indian food";
 }
 
 function coffee() {
-  document.getElementById("demo").innerHTML = "Coffee food";
+  document.getElementById("listing").innerHTML = "Coffee food";
 }
 
 function dessert() {
-  document.getElementById("demo").innerHTML = "Dessert food";
+  document.getElementById("listing").innerHTML = "Dessert food";
 }
 
 function icecream() {
-  document.getElementById("demo").innerHTML = "Ice Cream food";
+  document.getElementById("listing").innerHTML = "Ice Cream food";
 }
 
 function pinosorderingiframe() {
-  document.getElementById("orderingfeast").innerHTML = "<iframe src='https://feastfund.github.io/v.1/pinos/takeoutform.html' style='border:0px #ffffff none;' name='myiFrame' scrolling='yes' frameborder='1' marginheight='0px' marginwidth='0px' height='1200px' width='100%' allowfullscreen></iframe><div class='spacer' style='height:800vh'";
+  document.getElementById('orderingfeast').innerHTML = "<iframe id='gform' src='https://feastfund.github.io/v.1/pinos/takeoutform.html' style='border:0px #ffffff none;' name='myiFrame' scrolling='no' frameborder='1' marginheight='0px' marginwidth='0px' height='1350px' width='100%' allowfullscreen></iframe><div class='spacer' style='height:1250vh'></div>";
+loadtracker();
 }
 
-function irashaorderingiframe() {
-  document.getElementById("orderingfeast").innerHTML = "<iframe src='https://feastfund.github.io/v.1/restaurantsthatblockiframes/miyukiisushi.html' style='border:0px #ffffff none;' name='myiFrame' scrolling='yes' frameborder='1' marginheight='0px' marginwidth='0px' height='400px' width='65%' allowfullscreen></iframe><div class='spacer' style='height:100vw'";
+</script>
+  <script language="javascript">
+<!--
+if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+   location.replace("https://feastfund.github.io/v.1/mobile");
+}
+-->
+</script>
+<script type="text/javascript">
+var load = 0;
+
+function loadtracker() {
+document.getElementById('gform').onload = function() {
+    /*Execute on every reload on iFrame*/
+    load++;
+    if(load > 1){
+        /*Second reload is a submit*/
+        window.location.href = "https://feastfund.github.io/v.1/pinos/ordersuccess.html";
+    }
+}
 }
 </script>
-
+</center>
 </body>
 </html>
+
+
+
 
 
