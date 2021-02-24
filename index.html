@@ -286,7 +286,7 @@ a:hover {
 <script>
 
 function pizza() {
-  document.getElementById("listing").innerHTML = "<img src ='https://feastfund.github.io/v.1/pinos/pinoslisting.png' height='auto' width='50%' draggable='false'><br><button style='position:relative;top:0vw;left:0vw;font-size: 20px;line-height:28px;margin-bottom:4.5vw;' onclick='pinosorderingiframe()'>Order a Feast From Pino's</button>";
+  document.getElementById("listing").innerHTML = "<img src ='https://feastfund.github.io/v.1/pinos/pinoslisting.png' height='auto' width='50%' draggable='false'><br><button style='position:relative;top:0vw;left:0vw;font-size: 20px;line-height:28px;margin-bottom:4.5vw;' onclick='pinosorderingiframe();'>Order a Feast From Pino's</button>";
 }
 
 
@@ -335,18 +335,33 @@ function icecream() {
 }
 
 function pinosorderingiframe() {
-  document.getElementById("orderingfeast").innerHTML = "<iframe src='https://feastfund.github.io/v.1/pinos/takeoutform.html' style='border:0px #ffffff none;' name='myiFrame' scrolling='no' frameborder='1' marginheight='0px' marginwidth='0px' height='1850px' width='100%' allowfullscreen></iframe><div class='spacer' style='height:1250vh'";
+  document.getElementById('orderingfeast').innerHTML = "<iframe id='gform' src='https://feastfund.github.io/v.1/pinos/takeoutform.html' style='border:0px #ffffff none;' name='myiFrame' scrolling='no' frameborder='1' marginheight='0px' marginwidth='0px' height='1850px' width='100%' allowfullscreen></iframe><div class='spacer' style='height:1250vh'></div>";
+loadtracker();
 }
 
 </script>
-  <script language=javascript>
+  <script language="javascript">
 <!--
 if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
    location.replace("https://feastfund.github.io/v.1/mobile");
 }
 -->
 </script>
+<script type="text/javascript">
+var load = 0;
 
+function loadtracker() {
+document.getElementById('gform').onload = function() {
+    /*Execute on every reload on iFrame*/
+    load++;
+    if(load > 1){
+        /*Second reload is a submit*/
+        window.location.href = "https://feastfund.github.io/v.1/pinos/ordersuccess.html";
+    }
+}
+}
+</script>
+</center>
 </body>
 </html>
 
