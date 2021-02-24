@@ -5,10 +5,15 @@
   <title>Pino's Pizza Takeout Form</title>
 </head>
 <script>
-function showhide (checked){
+function cheesetoppingstriggerbutton (checked){
 if(checked==true)
-	document.getElementById('pizzatoppings').style.display = 'inline';
-  else document.getElementById('pizzatoppings').style.display = 'none';
+	document.getElementById('cheesepizzatoppings').style.display = 'inline';
+  else document.getElementById('cheesepizzatoppings').style.display = 'none';
+}
+function olivetoppingstriggerbutton (checked){
+if(checked==true)
+	document.getElementById('olivepizzatoppings').style.display = 'inline';
+  else document.getElementById('olivepizzatoppings').style.display = 'none';
 }
 </script>
 <body>
@@ -36,11 +41,11 @@ if(checked==true)
   <div class="form-element radio-buttons">
   <label for="Cheese Pizza">
   <span>Cheese Pizza<br><img src="http://www.pinospizza.com/wp-content/uploads/2020/10/Pinos3.png" style="width:300px;border-radius:20px;"><br></span>
-  <input type="checkbox" onclick="showhide(this.checked)" name="entry.1026964936" id="entry.1026964936" value="Cheese Pizza"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Add to Order</span>
+  <input type="checkbox" onclick="cheesetoppingstriggerbutton(this.checked)" name="entry.1026964936" id="entry.1026964936" value="Cheese Pizza"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Add to Order</span>
   </label>
     </div>
     </div>
-    <div id="pizzatoppings" style="height: 0px;display:none;text-align:left;font-size:16px;line-height:160%;width:300px;">
+    <div id="cheesepizzatoppings" style="height: 0px;display:none;text-align:left;font-size:16px;line-height:160%;width:300px;">
         <label for="Extra Cheese ($3.49)">
   <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Extra Cheese ($3.49)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Extra Cheese ($1.99)</span>
   </label>
@@ -116,6 +121,7 @@ if(checked==true)
           <label for="Pineapple ($1.99)">
   <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Pineapple ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Pineapple ($1.99)</span>
   </label>
+  <br>
     </div>
     
     <br>
@@ -123,10 +129,88 @@ if(checked==true)
       <div class="form-element radio-buttons">
   <span>Olive Pizza<br><img src="http://www.pinospizza.com/wp-content/uploads/2020/10/Pinos3.png" style="width:300px;border-radius:20px;"><br></span>
       <label for="Olive Pizza">
-  <input type="checkbox" name="entry.1573589744" id="Olive Pizza" value="Olive Pizza ($15.99"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Add to Order</span>
+  <input type="checkbox" onclick="olivetoppingstriggerbutton(this.checked)" name="entry.1573589744" id="Olive Pizza" value="Olive Pizza ($15.99"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Add to Order</span>
   </label>
   </div>
   </div>
+   <div id="olivepizzatoppings" style="height: 0px;display:none;text-align:left;font-size:16px;line-height:160%;width:300px;">
+        <label for="Extra Cheese ($3.49)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Extra Cheese ($3.49)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Extra Cheese ($1.99)</span>
+  </label>
+  <br>
+          <label for="Sausage ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Sausage ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Sausage ($1.99)</span>
+  </label>
+    <br>
+          <label for="Ham ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Ham ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Ham ($1.99)</span>
+  </label>
+      <br>
+          <label for="Pepperoni ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Pepperoni ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Pepperoni ($1.99)</span>
+  </label>
+       <br>
+          <label for="Meatballs ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Meatballs ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Meatballs ($1.99)</span>
+  </label>
+         <br>
+          <label for="Salami ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Salami ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Salami ($1.99)</span>
+  </label>
+           <br>
+          <label for="Chicken ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Chicken ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Chicken ($1.99)</span>
+  </label>
+             <br>
+          <label for="Canadian Bacon ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Canadian Bacon ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Canadian Bacon ($1.99)</span>
+  </label>
+               <br>
+          <label for="American Bacon ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="American Bacon ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">American Bacon ($1.99)</span>
+  </label>
+                 <br>
+          <label for="Onions ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Onions ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Onions ($1.99)</span>
+  </label>
+                   <br>
+          <label for="Roasted Peppers ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Roasted Peppers ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Roasted Peppers ($1.99)</span>
+  </label>
+                     <br>
+          <label for="Olives ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Olives ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Olives ($1.99)</span>
+  </label>
+                     <br>
+          <label for="Tomatoes ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Tomatoes ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Tomatoes ($1.99)</span>
+  </label>
+                       <br>
+          <label for="Garlic ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Garlic ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Garlic ($1.99)</span>
+  </label>
+                           <br>
+          <label for="Broccoli ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Broccoli ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Broccoli ($1.99)</span>
+  </label>
+                             <br>
+          <label for="Peppers ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Peppers ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Peppers ($1.99)</span>
+  </label>
+                              <br>
+          <label for="Spinach ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Spinach ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Spinach ($1.99)</span>
+  </label>
+                                <br>
+          <label for="Mushrooms ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Mushrooms ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Mushrooms ($1.99)</span>
+  </label>
+                                  <br>
+          <label for="Pineapple ($1.99)">
+  <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Pineapple ($1.99)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Pineapple ($1.99)</span>
+  </label>
+  <br>
+    </div>
   <br>
      <div class="item" style="padding:10px;background-color:white;border-radius:10px;width:340px">
       <div class="form-element radio-buttons">
