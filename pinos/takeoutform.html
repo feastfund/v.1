@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <title>Pino's Pizza Takeout Form</title>
 </head>
+<script>
+function showhide (checked){
+if(checked==true)
+	document.getElementById('pizzatoppings').style.display = 'inline';
+  else document.getElementById('pizzatoppings').style.display = 'none';
+}
+</script>
 <body>
 <center>
   <form action="https://docs.google.com/forms/d/1EpxYOp5bOScBhnMesClpqFvcEESnLBJsY5kF5u9SxVU/formResponse?">
@@ -29,11 +36,11 @@
   <div class="form-element radio-buttons">
   <label for="Cheese Pizza">
   <span>Cheese Pizza<br><img src="http://www.pinospizza.com/wp-content/uploads/2020/10/Pinos3.png" style="width:300px;border-radius:20px;"><br></span>
-  <input type="checkbox" onclick="toppings()" name="entry.1026964936" id="entry.1026964936" value="Cheese Pizza"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Add to Order</span>
+  <input type="checkbox" onclick="showhide(this.checked)" name="entry.1026964936" id="entry.1026964936" value="Cheese Pizza"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Add to Order</span>
   </label>
     </div>
     </div>
-    <div id="pizzatoppings" style="height: 0px;visibility:hidden;text-align:left;font-size:16px;line-height:160%;width:300px;">
+    <div id="pizzatoppings" style="height: 0px;display:none;text-align:left;font-size:16px;line-height:160%;width:300px;">
         <label for="Extra Cheese ($3.49)">
   <input type="checkbox" onclick="toppings()" name="entry.1201010235" id="entry.1201010235" value="Extra Cheese ($3.49)"><span style="padding:.5vw;background-color:white;border-radius:1vw;">Extra Cheese ($1.99)</span>
   </label>
@@ -153,7 +160,7 @@
   
     <script>
     function toppings() {
-document.getElementById('pizzatoppings').style.height = '550px';
+document.getElementById('pizzatoppings').style.height = 'auto';
 document.getElementById('pizzatoppings').style.visibility = 'visible';
 }
     </script>
